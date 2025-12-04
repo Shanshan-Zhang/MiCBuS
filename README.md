@@ -39,7 +39,7 @@ library(MiCBuS)
 For an example of how to use **MiCBuS**, please see the vignette:
 
 - **[Intro to
-  MiCBuS](https://shanshan-zhang.github.io/MiCBuS/doc/Intro_to_MiCBuS.html)**
+  MiCBuS](https://shanshan-zhang.github.io/MiCBuS/articles/Intro_to_MiCBuS.html)**
 
 You can also access it locally after installing MiCBuS:
 
