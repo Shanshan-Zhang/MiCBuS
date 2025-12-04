@@ -1,0 +1,39 @@
+Package: MiCBuS
+Type: Package
+Title: MiCBuS: Marker Gene Mining for Unknown Cell Types Using Bulk and Single-Cell RNA-Seq Data
+Version: 0.1.0
+Author: Shanshan Zhang
+Maintainer: Shanshan Zhang <sszhang3@arizona.edu>
+Description: Tools for identifying marker genes of unknown cell types by integrating bulk RNA-seq, 
+    single-cell RNA-seq, and Dirichlet-based pseudo-bulk simulation. The workflow includes building 
+    a cell-type reference, detecting scRNA-seq marker genes, estimating initial proportions, 
+    generating Dirichlet pseudo-bulk RNA-seq samples, and performing shrinkage-based differential 
+    expression analysis to identify pseudo marker genes for unknown or unannotated cell types.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Depends: 
+    R (>= 4.1.0)
+Imports:
+    Seurat,
+    SECRET,
+    alabama,
+    Biobase,
+    Matrix,
+    dplyr,
+    magrittr,
+    DESeq2,
+    SimBu,
+    BiocParallel,
+    SummarizedExperiment
+Suggests:
+    knitr,
+    rmarkdown,
+    ggplot2,
+    ggVennDiagram,
+    testthat,
+    xbioc,
+    methods
+VignetteBuilder: knitr
