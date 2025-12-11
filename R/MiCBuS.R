@@ -305,6 +305,7 @@ MiCBuS <- function(bulkdat, sc_eset, m = 20, seed = NULL) {
     stop("sc_eset must be an ExpressionSet.")
 
   pd <- Biobase::pData(sc_eset)
+
   if (!all(c("cluster", "sample") %in% colnames(pd)))
     stop("pData(sc_eset) must include 'cluster' and 'sample' columns.")
 
@@ -403,11 +404,8 @@ MiCBuS <- function(bulkdat, sc_eset, m = 20, seed = NULL) {
   ## ----------------------
   ## 8. Extract significant DE genes
   ## ----------------------
-  res.shrunk.df <- as.data.frame(res.shrunk)
-  DEpseudo.df <- res.shrunk.df[
-    res.shrunk.df$padj < 0.05 &
-      res.shrunk.df$log2FoldChange > 0,
-  ]
+  DEpseudo.df <- subset(res.shrunk, padj < 0.05 & log2FoldChange > 0)
+  DEpseudo.df <- data.frame(DEpseudo.df)
   DEpseudo.df$gene <- rownames(DEpseudo.df)
 
   return(DEpseudo.df)

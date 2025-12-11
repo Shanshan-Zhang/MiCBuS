@@ -33,7 +33,5 @@ Suggests:
     rmarkdown,
     ggplot2,
     ggVennDiagram,
-    testthat,
-    xbioc,
-    methods
+    testthat
 VignetteBuilder: knitr

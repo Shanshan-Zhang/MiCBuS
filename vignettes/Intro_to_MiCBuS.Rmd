@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 ```{r Load Pacakges, include=TRUE}
 # Load necessary libraries
 library(MiCBuS)
+library(Biobase)
 library(dplyr)
 library(ggplot2)
 library(ggVennDiagram)
@@ -121,7 +122,7 @@ vennp <- ggVennDiagram(x, set_size=5, color="black", edge_size=1.2,
 vennp
 ```
 
-```{r SessionInfo, include=TRUE, echo=TRUE}
+```{r SessionInfo, include=FALSE, echo=FALSE}
 sessionInfo()
 ```
 
